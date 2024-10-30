@@ -11,17 +11,12 @@ import Nav from '../component/nav.jsx';
 const LandingPage = ({ fields }) => {
   // Extract the required fields from the resource fields.
   const { title, hero, mainMenu } = fields;
+  console.log(fields);
   return (
     <div id="landing-page">
       <header className="header">
         <div className="header-content container">
-          <div className="navigation">
-            <ul className="menu">
-              {mainMenu.data.items.map(({ href, title }, i) => (
-                <li key={i}><a href={ href }>{ title }</a></li>
-              ))}
-            </ul>
-          </div>
+          <Nav menu={ mainMenu.data } />
           <div className="actions">
             <a href="#" className="btn-primary">Edit Page</a>
           </div>
