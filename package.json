@@ -9,7 +9,7 @@
     "build:watch": "webpack --watch",
     "build:client": "webpack --config webpack.config.cjs",
     "build:server": "webpack --config webpack.config.server.cjs",
-    "build:assets": "rm -rf dist/static dist/index.html && cp -r src/index.html src/static dist/",
+    "build:assets": "rm -rf dist/static dist/index.html && cp -r public/index.html src/static dist/",
     "dev": "react-scripts start"
   },
   "author": "Applura, Inc",
@@ -26,6 +26,7 @@
   "devDependencies": {
     "@babel/preset-react": "^7.22.15",
     "babel-loader": "^9.1.3",
+    "css-loader": "^7.1.2",
     "prettier": "^3.0.3",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
