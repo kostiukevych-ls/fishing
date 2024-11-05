@@ -1,6 +1,7 @@
 import React from "react";
 import ProcessedHTML from '../component/processed-html.jsx';
 import Nav from '../component/nav.jsx';
+import Cards from "../component/cards.jsx";
 
 /**
  * LandingPage renders "landing_page" resources.
@@ -10,7 +11,7 @@ import Nav from '../component/nav.jsx';
  */
 const LandingPage = ({ fields }) => {
   // Extract the required fields from the resource fields.
-  const { title, hero, mainMenu } = fields;
+  const { title, hero, mainMenu, cards } = fields;
   console.log(fields);
   return (
     <div id="landing-page">
@@ -38,46 +39,7 @@ const LandingPage = ({ fields }) => {
                 quickly describes how to use them.
               </div>
             </div>
-            <div className="cards">
-              <div className="card">
-                <div className="card-icon book"></div>
-                <div className="card-content">
-                  <div className="card-title">Find More Ways to Manage Your
-                    Content
-                  </div>
-                  <div className="card-description">
-                    Follow the menu links above to learn more about managing
-                    content or how to build your JavaScript front-end
-                    application.
-                  </div>
-                </div>
-              </div>
-              <div className="card">
-                <div className="card-icon notice"></div>
-                <div className="card-content">
-                  <div className="card-title">Edit This Page or Switch to Your
-                    Favorite JavaScript Library
-                  </div>
-                  <div className="card-description">
-                    Edit these pages and tweak this default front end's styling.
-                    If you're familiar with a different JavaScript library, such
-                    as Vue or Svelte, you can easily swap this introductory
-                    front end out with one that is more familiar to you.
-                  </div>
-                </div>
-              </div>
-              <div className="card">
-                <div className="card-icon terminal"></div>
-                <div className="card-content">
-                  <div className="card-title">Customize Your Front End</div>
-                  <div className="card-description">
-                    When you've found your bearings, replace this front-end
-                    application with one you've built yourself and customize the
-                    content model to your specific needs.
-                  </div>
-                </div>
-              </div>
-            </div>
+            <Cards cards={cards} />
           </div>
         </div>
       </div>
