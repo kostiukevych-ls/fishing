@@ -4,7 +4,7 @@ import './index.css';
 import App from './app.jsx';
 import Socket from "./component/socket.jsx";
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
   // Access the global `bootstrap` function from the Applura client
   const client = window.bootstrap();  // Ensure `bootstrap` is globally accessible
 
